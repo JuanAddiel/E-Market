@@ -1,0 +1,17 @@
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\bin\Debug\net6.0\E-Market.Infrastructure.Persistence.deps.json
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\bin\Debug\net6.0\E-Market.Infrastructure.Persistence.dll
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\bin\Debug\net6.0\E-Market.Infrastructure.Persistence.pdb
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\bin\Debug\net6.0\E-Market.Core.Application.dll
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\bin\Debug\net6.0\E-Market.Core.Domain.dll
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\bin\Debug\net6.0\E-Market.Core.Application.pdb
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\bin\Debug\net6.0\E-Market.Core.Domain.pdb
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\obj\Debug\net6.0\E-Market.Infrastructure.Persistence.csproj.AssemblyReference.cache
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\obj\Debug\net6.0\E-Market.Infrastructure.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\obj\Debug\net6.0\E-Market.Infrastructure.Persistence.AssemblyInfoInputs.cache
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\obj\Debug\net6.0\E-Market.Infrastructure.Persistence.AssemblyInfo.cs
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\obj\Debug\net6.0\E-Market.Infrastructure.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\obj\Debug\net6.0\E-Market.Infrastructure.Persistence.csproj.CopyComplete
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\obj\Debug\net6.0\E-Market.Infrastructure.Persistence.dll
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\obj\Debug\net6.0\refint\E-Market.Infrastructure.Persistence.dll
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\obj\Debug\net6.0\E-Market.Infrastructure.Persistence.pdb
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\obj\Debug\net6.0\ref\E-Market.Infrastructure.Persistence.dll

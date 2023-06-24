@@ -1,0 +1,12 @@
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Core.Domain\bin\Debug\net6.0\E-Market.Core.Domain.deps.json
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Core.Domain\bin\Debug\net6.0\E-Market.Core.Domain.dll
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Core.Domain\bin\Debug\net6.0\E-Market.Core.Domain.pdb
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Core.Domain\obj\Debug\net6.0\E-Market.Core.Domain.csproj.AssemblyReference.cache
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Core.Domain\obj\Debug\net6.0\E-Market.Core.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Core.Domain\obj\Debug\net6.0\E-Market.Core.Domain.AssemblyInfoInputs.cache
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Core.Domain\obj\Debug\net6.0\E-Market.Core.Domain.AssemblyInfo.cs
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Core.Domain\obj\Debug\net6.0\E-Market.Core.Domain.csproj.CoreCompileInputs.cache
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Core.Domain\obj\Debug\net6.0\E-Market.Core.Domain.dll
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Core.Domain\obj\Debug\net6.0\refint\E-Market.Core.Domain.dll
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Core.Domain\obj\Debug\net6.0\E-Market.Core.Domain.pdb
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Core.Domain\obj\Debug\net6.0\ref\E-Market.Core.Domain.dll

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>E_Market.Infrastructure.Persistence</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.18" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.18" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\E-Market.Core.Application\E-Market.Core.Application.csproj" />
+    <ProjectReference Include="..\E-Market.Core.Domain\E-Market.Core.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
