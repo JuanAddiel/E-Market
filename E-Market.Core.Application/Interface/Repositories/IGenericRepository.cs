@@ -11,7 +11,7 @@ namespace E_Market.Core.Application.Interface.Repositories
         Task Add (T entity);
         Task Update (T entity);
         Task Delete (T entity);
-        Task GetById(int id);
+        Task<T> GetByIdAsync(int Id);
         Task<List<T>> GetAll ();
         Task<List<T>> GetAllWithInclude (List<string> properties);
     }

@@ -17,24 +17,24 @@ namespace E_Market.Infrastructure.Persistence.Repositories
             _context = context;
         }
 
-        public async Task Add(T entity)
+        public virtual async Task Add(T entity)
         {
             await _context.Set<T>().AddAsync(entity);
             await _context.SaveChangesAsync();
         }
 
-        public async Task Delete(T entity)
+        public virtual async Task Delete(T entity)
         {
             _context.Set<T>().Remove(entity);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<List<T>> GetAll()
+        public virtual async Task<List<T>> GetAll()
         {
             return await _context.Set<T>().ToListAsync();
         }
 
-        public async Task<List<T>> GetAllWithInclude(List<string> properties)
+        public virtual async Task<List<T>> GetAllWithInclude(List<string> properties)
         {
             var query = _context.Set<T>().AsQueryable();
             foreach (var property in properties)
@@ -44,12 +44,12 @@ namespace E_Market.Infrastructure.Persistence.Repositories
             return await query.ToListAsync();
         }
 
-        public async Task GetById(int id)
+        public virtual async Task<T> GetByIdAsync(int Id)
         {
-            await _context.Set<T>().FindAsync(id);
+            return await _context.Set<T>().FindAsync(Id);
         }
 
-        public async Task Update(T entity)
+        public virtual async Task Update(T entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
             await _context.SaveChangesAsync();

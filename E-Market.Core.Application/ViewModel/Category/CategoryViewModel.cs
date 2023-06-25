@@ -11,5 +11,6 @@ namespace E_Market.Core.Application.ViewModel.Category
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
+        public int AnuncioQuantity { get; set; }
     }
 }

@@ -12,7 +12,8 @@ namespace E_Market.Core.Application
     {
         public static void AddApplication(this IServiceCollection services, IConfiguration configuration)
         {
-
+            #region Dependecy
+            #endregion
         }
     }
 }
