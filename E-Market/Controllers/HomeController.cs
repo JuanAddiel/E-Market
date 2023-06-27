@@ -1,4 +1,7 @@
-﻿using E_Market.Models;
+﻿using E_Market.Core.Application.Interface.Services;
+using E_Market.Core.Application.ViewModel.Anuncio;
+using E_Market.Middlawares;
+using E_Market.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,16 +9,26 @@ namespace E_Market.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IAnuncioServices _anuncioServices;
+        private readonly ICategoryServices _categoryServices;
+        private readonly ValidateUserSession _validateUserSession;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IAnuncioServices anuncioServices, ICategoryServices categoryServices, ValidateUserSession validateUserSession)
         {
-            _logger = logger;
+            _anuncioServices = anuncioServices;
+            _categoryServices = categoryServices;
+            _validateUserSession = validateUserSession;
         }
 
-        public IActionResult Index()
+        //Investiga si hay usuario si no hay manda a la vista index, del controlador user
+        public async Task<IActionResult> Index(FilterAnuncioViewModel vm)
         {
-            return View();
+            if (!_validateUserSession.hasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+            ViewBag.Category = await _categoryServices.GetAllViewModel();
+            return View(await _anuncioServices.GetAllViewModelWithFilters(vm));
         }
 
         public IActionResult Privacy()

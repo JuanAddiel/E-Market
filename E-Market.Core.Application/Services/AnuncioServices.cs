@@ -86,5 +86,24 @@ namespace E_Market.Core.Application.Services
 
             await _anuncioRepository.Update(anuncio);
         }
+        public async Task<List<AnuncioViewModel>> GetAllViewModelWithFilters(FilterAnuncioViewModel filters)
+        {
+            var anuncioList = await _anuncioRepository.GetAllWithInclude(new List<string> { "Category" });
+            var list = anuncioList.Where(Anuncio => Anuncio.UsuarioId == _userViewModel.Id).Select(a => new AnuncioViewModel
+            {
+                Nombre = a.Nombre,
+                Id = a.Id,
+                CategoryId = a.Category.Id,
+                Imagen = a.Imagen,
+                Precio = a.Precio,
+                Descripcion = a.Descripcion,
+
+            }).ToList();
+            if (filters.CategoryId != null)
+            {
+                list = list.Where(a => a.CategoryId == filters.CategoryId.Value).ToList();
+            }
+            return list;
+        }
     }
 }

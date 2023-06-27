@@ -9,5 +9,6 @@ namespace E_Market.Core.Application.Interface.Services
 {
     public interface IAnuncioServices:IGeneryServices<SaveAnuncioViewModel, AnuncioViewModel>
     {
+        Task<List<AnuncioViewModel>> GetAllViewModelWithFilters(FilterAnuncioViewModel filters);
     }
 }

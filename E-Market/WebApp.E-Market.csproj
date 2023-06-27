@@ -21,4 +21,10 @@
     <ProjectReference Include="..\E-Market.Infrastructure.Persistence\E-Market.Infrastructure.Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Anuncio\" />
+    <Folder Include="Views\User\" />
+    <Folder Include="Views\Category\" />
+  </ItemGroup>
+
 </Project>

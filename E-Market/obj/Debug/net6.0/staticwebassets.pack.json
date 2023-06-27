@@ -1,0 +1,213 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebApp.E-Market.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WebApp.E-Market.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\bootstrap\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.WebApp.E-Market.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.WebApp.E-Market.props",
+      "PackagePath": "build\\WebApp.E-Market.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.WebApp.E-Market.props",
+      "PackagePath": "buildMultiTargeting\\WebApp.E-Market.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.WebApp.E-Market.props",
+      "PackagePath": "buildTransitive\\WebApp.E-Market.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
