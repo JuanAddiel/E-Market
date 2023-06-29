@@ -13,7 +13,6 @@ namespace E_Market.Core.Domain.Entites
         public string Correo { get; set; }
         public string Telefono { get; set; }
         public string Password { get; set; }
-        public string ConfirmPassword { get; set; }
         public string NombreUsuario { get; set; }
         public ICollection<Anuncio> Anuncios { get; set; }
     }

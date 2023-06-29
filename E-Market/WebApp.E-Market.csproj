@@ -23,7 +23,6 @@
 
   <ItemGroup>
     <Folder Include="Views\Anuncio\" />
-    <Folder Include="Views\User\" />
     <Folder Include="Views\Category\" />
   </ItemGroup>
 

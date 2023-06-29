@@ -546,3 +546,10 @@ C:\Users\addie\Desktop\Proyectos\E-Market\E-Market\obj\Debug\net6.0\refint\WebAp
 C:\Users\addie\Desktop\Proyectos\E-Market\E-Market\obj\Debug\net6.0\WebApp.E-Market.pdb
 C:\Users\addie\Desktop\Proyectos\E-Market\E-Market\obj\Debug\net6.0\WebApp.E-Market.genruntimeconfig.cache
 C:\Users\addie\Desktop\Proyectos\E-Market\E-Market\obj\Debug\net6.0\ref\WebApp.E-Market.dll
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market\bin\Debug\net6.0\System.Web.Mvc.dll
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market\bin\Debug\net6.0\System.Web.Razor.dll
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market\bin\Debug\net6.0\System.Web.Helpers.dll
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market\bin\Debug\net6.0\System.Web.WebPages.dll
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll

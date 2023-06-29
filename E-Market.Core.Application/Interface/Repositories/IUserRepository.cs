@@ -11,5 +11,6 @@ namespace E_Market.Core.Application.Interface.Repositories
     public interface IUserRepository:IGenericRepository<User>
     {
         Task<User> LoginAsync(LoginViewModel vm);
+        Task<bool> GetName(SaveUserViewModel vm);
     }
 }

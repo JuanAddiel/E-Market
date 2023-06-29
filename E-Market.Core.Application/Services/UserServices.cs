@@ -18,15 +18,22 @@ namespace E_Market.Core.Application.Services
             _userRepository = userRepository;
         }
         public async Task Add(SaveUserViewModel vm)
-        {
+        {  
             User user = new();
             user.Id = vm.Id;
             user.Nombre = vm.Nombre;
-            user.NombreUsuario = vm.NombreUsuario;
+            user.Apellido = vm.Apellido;
             user.Correo = vm.Correo;
+            user.NombreUsuario = vm.NombreUsuario;
             user.Telefono = vm.Telefono;
+            user.Password = vm.Password;
 
             await _userRepository.Add(user);
+        }
+        public async Task<bool> GetNombre(SaveUserViewModel vm)
+        {
+            var user = await _userRepository.GetName(vm);
+            return user;
         }
 
         public async Task Delete(int id)

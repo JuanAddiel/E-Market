@@ -14,12 +14,12 @@ namespace E_Market.Core.Application.Helpers
             // Create a SHA256
             using (SHA256 sha256 = SHA256.Create())
             {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                StringBuilder builder = new StringBuilder();
+                byte[] ps = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new();
                 //Convert byte a string
-                for (int i = 0; i < bytes.Length; i++)
+                for (int i = 0; i < ps.Length; i++)
                 {
-                    builder.Append(bytes[i].ToString("x2"));
+                    builder.Append(ps[i].ToString("x2"));
 
                 }
                 return builder.ToString();

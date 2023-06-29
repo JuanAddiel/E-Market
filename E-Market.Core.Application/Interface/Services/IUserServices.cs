@@ -10,5 +10,7 @@ namespace E_Market.Core.Application.Interface.Services
     public interface IUserServices:IGeneryServices<SaveUserViewModel, UserViewModel>
     {
         Task<UserViewModel> Login(LoginViewModel vm);
+        Task<bool> GetNombre(SaveUserViewModel use);
+
     }
 }

@@ -4,10 +4,11 @@ using E_Market.Core.Application.ViewModel.User;
 using E_Market.Core.Domain.Entites;
 using E_Market.Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography;
+using System.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace E_Market.Infrastructure.Persistence.Repositories
@@ -26,6 +27,11 @@ namespace E_Market.Infrastructure.Persistence.Repositories
             await base.Add(entity);
         }
 
+        public async Task<bool> GetName(SaveUserViewModel vm)
+        {
+            var user = await _context.Set<User>().FirstOrDefaultAsync(u => u.NombreUsuario == vm.NombreUsuario);
+            return user != null;
+        }
 
         public async Task<User> LoginAsync(LoginViewModel vm)
         {
