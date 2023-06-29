@@ -1,0 +1,43 @@
+﻿@using E_Market.Core.Application.ViewModel.Category;
+@model CategorySaveViewModel;
+@{
+    bool editMode = Model.Id == 0 ? false : true;
+    ViewData["Title"] = "Crear Categoria";
+}
+   <div class="row">
+                <div class="col-6 offset-3 p-3 mb-3">
+                    <div class="shadow-lg  bg-body-tertiary rounded row d-flex justify-content-center align-items-center ">
+                        <div class="card p-2">
+                            <div class="card-header header text-light">
+                    <h4>@(editMode ? $"Editando la categoria: {Model.Nombre}" : "Creando una nueva categoria")</h4>
+                            </div>
+                            <div class="card-body">
+
+                    <form method="post" asp-controller="Category" asp-action="@(editMode ? "Edit":"Create")">
+            
+                                    <div class="form-outline mb-4">
+                                        <input asp-for="Nombre" class="form-control form-control-lg"
+                                               placeholder="Ingresar el nombre" />
+                                    </div>
+            
+                                    <div class="form-outline mb-4">
+                                        <textarea asp-for="Descripcion" class="form-control form-control-lg"
+                                               placeholder="Ingresas la descripcion" ></textarea>
+                                    </div>
+                               
+            
+                                    <input type="hidden" asp-for="Id" />
+            
+                                    <button type="submit" class="btn header">Guardar</button>
+                                    <a asp-controller="Category" asp-action="Index" class="btn btn-danger">Volver atras</a>
+            
+                                </form>
+            
+                            </div>
+            
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        

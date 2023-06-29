@@ -1,0 +1,57 @@
+﻿@using E_Market.Core.Application.ViewModel.Category;
+@model List<CategoryViewModel>;
+@{
+    ViewData["Title"] = "Categoria";
+}
+
+<div class="container pt4 pt-xl-5">
+    <div class="row pt-5">
+        <div class="col-md-8 text-center text-md-start mx-auto">
+            <div class="text-center">
+                <h1 class="display-4 fw-bold mb-5">
+                    Bienvenido a la creacion  <span class="underline">
+                        de
+                        categorias
+                    </span>.
+                </h1>
+                <p class="fs-5 text-muted mb-5">Podras crear, editar y eliminar categorias.</p>
+                <div class="shadow-sm-3"><a asp-controller="Category" asp-action="Create" class="btn btn-danger">Crear categoria</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section class=" vh-100">
+    <div class="container-fluid h-custom p-3">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <table class="table align-middle">
+                <thead class="gradient">
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Anuncios</th>
+                        <th scope="col">Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Nombre</td>
+                            <td>@item.Descripcion</td>
+                            <td>@item.AnuncioQuantity</td>
+                            <td>
+                                <button type="button" class="btn btn-link btn-sm px-3" data-ripple-color="dark">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>

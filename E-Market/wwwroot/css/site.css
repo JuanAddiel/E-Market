@@ -20,6 +20,10 @@ body {
     background: linear-gradient(120deg, #FF6666, #0ea0ff);
     color: #fff;
 }
+.header {
+    background-color: #0ea0ff;
+    color: #fff;
+}
 
 .divider:after,
 .divider:before {

@@ -33,7 +33,7 @@ namespace E_Market.Controllers
                 return RedirectToRoute(new { controller = "User", action = "Index" });
             }
             CategorySaveViewModel vm = new();
-            return View("SaveAnuncio", vm);
+            return View("SaveCategory", vm);
         }
         [HttpPost]
         public async Task<IActionResult> Create(CategorySaveViewModel vm)

@@ -14,13 +14,14 @@
     <link rel="stylesheet" href="~/lib/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/E_Market.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Font-css/all.css"/>
 </head>
 <body>
     <header>
 
         <nav class="navbar navbar-dark navbar-expand-lg gradient">
             <div class="container">
-                <a class="navbar-brand logo" href="#">Brand</a>
+                <a class="navbar-brand logo">E-Market</a>
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="visually-hidden">
                         Toggle
@@ -32,8 +33,8 @@
                         @if(user != null)
                         {
                             <li class="nav-item"><a class="nav-link active" asp-controller="Home" asp-action="Index">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" asp-controller="Anuncio" asp-action="Index">Projects</a></li>
-                            <li class="nav-item"><a class="nav-link" asp-controller="Category" asp-action="Index">CV</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="Anuncio" asp-action="Index">Anuncio</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="Category" asp-action="Index">Category</a></li>
 
                             <li class="nav-item"><a class="nav-link" asp-controller="User" asp-action="Logout">Cerrar Seccion</a></li>
                         }
@@ -52,7 +53,7 @@
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

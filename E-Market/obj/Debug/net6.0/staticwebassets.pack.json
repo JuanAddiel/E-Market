@@ -5,6 +5,78 @@
       "PackagePath": "staticwebassets\\WebApp.E-Market.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\all.css",
+      "PackagePath": "staticwebassets\\Font-css\\all.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\all.min.css",
+      "PackagePath": "staticwebassets\\Font-css\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\brands.css",
+      "PackagePath": "staticwebassets\\Font-css\\brands.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\brands.min.css",
+      "PackagePath": "staticwebassets\\Font-css\\brands.min.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\Font-css\\fontawesome.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\Font-css\\fontawesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\regular.css",
+      "PackagePath": "staticwebassets\\Font-css\\regular.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\regular.min.css",
+      "PackagePath": "staticwebassets\\Font-css\\regular.min.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\solid.css",
+      "PackagePath": "staticwebassets\\Font-css\\solid.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\solid.min.css",
+      "PackagePath": "staticwebassets\\Font-css\\solid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\svg-with-js.css",
+      "PackagePath": "staticwebassets\\Font-css\\svg-with-js.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\svg-with-js.min.css",
+      "PackagePath": "staticwebassets\\Font-css\\svg-with-js.min.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\v4-font-face.css",
+      "PackagePath": "staticwebassets\\Font-css\\v4-font-face.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\v4-font-face.min.css",
+      "PackagePath": "staticwebassets\\Font-css\\v4-font-face.min.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\v4-shims.css",
+      "PackagePath": "staticwebassets\\Font-css\\v4-shims.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\v4-shims.min.css",
+      "PackagePath": "staticwebassets\\Font-css\\v4-shims.min.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\v5-font-face.css",
+      "PackagePath": "staticwebassets\\Font-css\\v5-font-face.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\Font-css\\v5-font-face.min.css",
+      "PackagePath": "staticwebassets\\Font-css\\v5-font-face.min.css"
+    },
+    {
       "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -191,6 +263,54 @@
     {
       "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\addie\\Desktop\\Proyectos\\E-Market\\E-Market\\wwwroot\\lib\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.min.js.map"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.WebApp.E-Market.Microsoft.AspNetCore.StaticWebAssets.props",
