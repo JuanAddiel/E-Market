@@ -15,3 +15,5 @@ C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\ob
 C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\obj\Debug\net6.0\refint\E-Market.Infrastructure.Persistence.dll
 C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\obj\Debug\net6.0\E-Market.Infrastructure.Persistence.pdb
 C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\obj\Debug\net6.0\ref\E-Market.Infrastructure.Persistence.dll
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\bin\Debug\net6.0\E-Market.Infrastructure.Persistence.runtimeconfig.json
+C:\Users\addie\Desktop\Proyectos\E-Market\E-Market.Infrastructure.Persistence\obj\Debug\net6.0\E-Market.Infrastructure.Persistence.genruntimeconfig.cache

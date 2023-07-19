@@ -8,7 +8,7 @@
                 <div class="col-6 offset-3 p-3 mb-3">
                     <div class="shadow-lg  bg-body-tertiary rounded row d-flex justify-content-center align-items-center ">
                         <div class="card p-2">
-                            <div class="card-header header text-light">
+                <div class="card-header gradient text-light">
                     <h4>@(editMode ? $"Editando la categoria: {Model.Nombre}" : "Creando una nueva categoria")</h4>
                             </div>
                             <div class="card-body">
@@ -28,7 +28,7 @@
             
                                     <input type="hidden" asp-for="Id" />
             
-                                    <button type="submit" class="btn header">Guardar</button>
+                                    <button type="submit" class="btn btn-primary">Guardar</button>
                                     <a asp-controller="Category" asp-action="Index" class="btn btn-danger">Volver atras</a>
             
                                 </form>

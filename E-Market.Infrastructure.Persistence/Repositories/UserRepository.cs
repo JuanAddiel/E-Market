@@ -20,11 +20,11 @@ namespace E_Market.Infrastructure.Persistence.Repositories
         {
             _context = context;
         }
-        public override async Task Add(User entity)
+        public override async Task<User> Add(User entity)
         {
             //Estoy cumpliendo con el pincipio de liskov, ya que estoy sobreescribiendo el metodo AddAsync de la clase GenericRepository
             entity.Password = PasswordEncryption.ComputeSha256Hash(entity.Password);
-            await base.Add(entity);
+            return await base.Add(entity);
         }
 
         public async Task<bool> GetName(SaveUserViewModel vm)

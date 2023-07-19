@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Anuncio\" />
+    <Folder Include="wwwroot\Image\Anuncio\" />
   </ItemGroup>
 
 </Project>

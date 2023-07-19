@@ -1,6 +1,10 @@
 ﻿using E_Market.Core.Application.Interface.Services;
 using E_Market.Core.Application.ViewModel.Anuncio;
+using E_Market.Core.Application.Helpers;
+using E_Market.Core.Application.ViewModel.Image;
+using E_Market.Core.Domain.Entites;
 using E_Market.Middlawares;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace E_Market.Controllers
@@ -10,12 +14,14 @@ namespace E_Market.Controllers
         private readonly IAnuncioServices _anuncioServices;
         private readonly ICategoryServices _categoryServices;
         private readonly ValidateUserSession _validateUserSession;
+        private readonly IImagenServices _imagenServices;
 
-        public AnuncioController(IAnuncioServices anuncioServices, ICategoryServices categoryServices, ValidateUserSession validateUserSession)
+        public AnuncioController(IImagenServices imagenServices,IAnuncioServices anuncioServices, ICategoryServices categoryServices, ValidateUserSession validateUserSession)
         {
             _anuncioServices = anuncioServices;
             _categoryServices = categoryServices;
             _validateUserSession = validateUserSession;
+            _imagenServices = imagenServices;
         }
 
         public async Task<IActionResult> Index()
@@ -49,9 +55,32 @@ namespace E_Market.Controllers
                 vm.Categories = await _categoryServices.GetAllViewModel();
                 return View("SaveAnuncio", vm);
             }
-            await _anuncioServices.Add(vm);
+
+            SaveAnuncioViewModel anunciovm = await _anuncioServices.Add(vm);
+            if (anunciovm != null && anunciovm.Id != 0)
+            {
+                List<string> imagePaths = UploadFile.UploadFiles(vm.File, anunciovm.Id);
+                foreach (var imgPath in imagePaths)
+                {
+                    var imagen = new Imagen
+                    {
+                        Nombre = Path.GetFileName(imgPath),
+                        ImageUrl = imgPath,
+                        idAnuncio = anunciovm.Id
+                    };
+                    SaveImagenViewModel sv = new();
+                    sv.Id = imagen.Id;
+                    sv.ImageUrl = imagen.ImageUrl;
+                    sv.Nombre = imagen.Nombre;
+                    sv.IdAnuncio = imagen.idAnuncio;
+
+                    await _imagenServices.Add(sv);
+                }
+                await _anuncioServices.Update(anunciovm);
+            }
             return RedirectToRoute(new { controller = "Anuncio", action = "Index" });
         }
+
         public async Task<IActionResult> Edit(int id)
         {
             if (!_validateUserSession.hasUser())
@@ -62,6 +91,7 @@ namespace E_Market.Controllers
             vm.Categories = await _categoryServices.GetAllViewModel();
             return View("SaveAnuncio", vm);
         }
+
         [HttpPost]
         public async Task<IActionResult> Edit(SaveAnuncioViewModel vm)
         {
@@ -69,12 +99,21 @@ namespace E_Market.Controllers
             {
                 return RedirectToRoute(new { controller = "User", action = "Index" });
             }
+
             if (!ModelState.IsValid)
             {
                 vm.Categories = await _categoryServices.GetAllViewModel();
                 return View("SaveAnuncio", vm);
             }
-            await _anuncioServices.Update(vm);
+
+            SaveAnuncioViewModel anunciovm = await _anuncioServices.GetByIdSaveViewModel(vm.Id);
+
+            List<string> uploadedImagePaths = UploadFile.UploadFiles(vm.File, anunciovm.Id, true, anunciovm.Imagen);
+
+            anunciovm.Imagen = uploadedImagePaths;
+
+            await _anuncioServices.Update(anunciovm);
+
             return RedirectToRoute(new { controller = "Anuncio", action = "Index" });
         }
         public async Task<IActionResult> Delete(int id)
@@ -93,8 +132,24 @@ namespace E_Market.Controllers
             {
                 return RedirectToRoute(new { controller = "User", action = "Index" });
             }
+
             await _anuncioServices.Delete(id);
+            string basePath = $"/Image/Anuncio/{id}";
+            string path = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot{basePath}");
+            if (Directory.Exists(path))
+            {
+                DirectoryInfo directoryInfo = new DirectoryInfo(path);
+                foreach (FileInfo item in directoryInfo.GetFiles())
+                {
+                    item.Delete();
+                }
+                foreach (DirectoryInfo item in directoryInfo.GetDirectories())
+                {
+                    item.Delete(true);
+                }
+            }
             return RedirectToRoute(new { controller = "Anuncio", action = "Index" });
         }
+
     }
 }

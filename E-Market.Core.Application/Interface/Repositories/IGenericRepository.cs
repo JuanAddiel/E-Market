@@ -8,7 +8,7 @@ namespace E_Market.Core.Application.Interface.Repositories
 {
     public interface IGenericRepository<T> where T : class
     {
-        Task Add (T entity);
+        Task<T>Add (T entity);
         Task Update (T entity);
         Task Delete (T entity);
         Task<T> GetByIdAsync(int Id);

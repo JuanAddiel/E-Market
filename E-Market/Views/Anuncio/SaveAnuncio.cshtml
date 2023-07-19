@@ -1,0 +1,86 @@
+﻿@using E_Market.Core.Application.ViewModel.Anuncio;
+@model SaveAnuncioViewModel;
+@{
+
+    bool editMode = Model.Id == 0 ? false : true;
+    ViewData["Title"] = editMode ? "Edit Anuncio" : "Add Anuncio";
+}
+
+<div class="row">
+    <div class="col-6 offset-3 p-3 mb-3">
+        <div class="shadow-lg   bg-body-tertiary rounded row d-flex justify-content-center align-items-center ">
+            <div class="card p-2">
+                <div class="card-header gradient text-light">
+                    <h4>@(editMode ? $"Editando el anuncio: {Model.Nombre}" : "Creando un nuevo anuncio")</h4>
+                </div>
+                <div class="card-body">
+                    @if(editMode)
+                    {
+                        <img src="" class="rounded mx-auto d-block" alt="...">
+                    }
+                    )
+                    @if (Model.Categories == null || Model.Categories.Count == 0)
+                    {
+                        <div class="alert alert-warning">
+                            <p>No hay categorias creadas</p>
+                            <a asp-controller="Anuncio" asp-action="Index" class="btn btn-primary">Volver atras</a>
+                        </div>
+                    }
+                    else
+                    {
+                        <form method="post" asp-controller="Anuncio" asp-action="@(editMode ? "Edit":"Create")" enctype="multipart/form-data">
+
+                        <div class="form-outline mb-4">
+                            <input asp-for="Nombre" class="form-control form-control-lg"
+                                   placeholder="Ingresar el nombre" />
+                                <span asp-validation-for="Nombre" class="text-danger"></span>
+                        </div>
+                        <div class="form-outline mb-4">
+                            @if(editMode){
+                                    <input asp-for="File" accept="image/jpg, image/jpeg, image/png, image/gif" multiple class="form-control form-control-lg"
+                                           placeholder="Seleccione la imagen" />
+
+                                }
+                                else
+                                {
+                                    <input asp-for="File" accept="image/jpg, image/jpeg, image/png, image/gif" multiple required class="form-control form-control-lg"
+                                           placeholder="Seleccione la imagen" />
+                                    <span asp-validation-for="File" class="text-danger"></span>
+
+                                }
+
+                        </div>
+                        <div class="form-outline mb-4">
+                                <input type="number" asp-for="Precio" class="form-control form-control-lg"
+                                   placeholder="Ingresar el precio" />
+                                <span asp-validation-for="Precio" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <textarea asp-for="Descripcion" class="form-control form-control-lg"
+                                      placeholder="Ingresas la descripcion"></textarea>
+                                <span asp-validation-for="Descripcion" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <select asp-for="CategoryId" asp-items="@(new SelectList(Model.Categories,"Id","Nombre"))" class="form-control form-control-lg">
+                                <option value="0">-- Select a category --</option>
+                            </select>
+                                <span asp-validation-for="CategoryId" class="text-danger"></span>
+                        </div>
+
+                        <input type="hidden" asp-for="Id" />
+
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <a asp-controller="Anuncio" asp-action="Index" class="btn btn-danger">Volver atras</a>
+
+                    </form>
+                    }
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\addie\Desktop\Proyectos\E-Market\E-Market
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/addie/Desktop/Proyectos/E-Market/E-Market/Views/Anuncio/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW51bmNpb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/addie/Desktop/Proyectos/E-Market/E-Market/Views/Anuncio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW51bmNpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/addie/Desktop/Proyectos/E-Market/E-Market/Views/Anuncio/SaveAnuncio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW51bmNpb1xTYXZlQW51bmNpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/addie/Desktop/Proyectos/E-Market/E-Market/Views/Category/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

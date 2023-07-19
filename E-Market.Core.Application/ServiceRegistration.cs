@@ -18,6 +18,7 @@ namespace E_Market.Core.Application
             services.AddTransient<IAnuncioServices, AnuncioServices>();
             services.AddTransient<ICategoryServices, CategoryServices>();
             services.AddTransient<IUserServices, UserServices>();
+            services.AddTransient<IImagenServices, ImagenServices>();
             #endregion
         }
     }

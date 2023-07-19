@@ -2,7 +2,6 @@
 using E_Market.Core.Application.Interface.Repositories;
 using E_Market.Core.Application.Interface.Services;
 using E_Market.Core.Application.ViewModel.Anuncio;
-using E_Market.Core.Application.ViewModel.Category;
 using E_Market.Core.Application.ViewModel.User;
 using E_Market.Core.Domain.Entites;
 using Microsoft.AspNetCore.Http;
@@ -17,26 +16,36 @@ namespace E_Market.Core.Application.Services
     public class AnuncioServices : IAnuncioServices
     {
         private readonly IAnuncioRepository _anuncioRepository;
-        private readonly IHttpContextAccessor _httpContext;
+        private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly UserViewModel _userViewModel;
-        public AnuncioServices(IAnuncioRepository anuncioRepository, IHttpContextAccessor httpContextAccessor)
+        private readonly IImagenServices _imagenServices;
+        public AnuncioServices(IAnuncioRepository anuncioRepository, IHttpContextAccessor httpContextAccessor, IImagenServices imagenServices)
         {
             _anuncioRepository = anuncioRepository;
-            _userViewModel = httpContextAccessor.HttpContext.Session.Get<UserViewModel>("user");
+            _httpContextAccessor = httpContextAccessor;
+            _userViewModel = _httpContextAccessor.HttpContext.Session.Get<UserViewModel>("user");
+            _imagenServices = imagenServices;
         }
 
-        public async Task Add(SaveAnuncioViewModel vm)
+        public async Task<SaveAnuncioViewModel> Add(SaveAnuncioViewModel vm)
         {
             Anuncio anuncio = new();
             anuncio.Id = vm.Id;
             anuncio.Nombre = vm.Nombre;
-            anuncio.Imagen = vm.Imagen;
             anuncio.Precio = vm.Precio;
             anuncio.Descripcion = vm.Descripcion;
             anuncio.CategoryId = vm.CategoryId;
             anuncio.UsuarioId = _userViewModel.Id;
-            await _anuncioRepository.Add(anuncio);
 
+            anuncio = await _anuncioRepository.Add(anuncio);
+
+            SaveAnuncioViewModel anunciovm = new();
+            anunciovm.Id = anuncio.Id;
+            anunciovm.Nombre = anuncio.Nombre;
+            anunciovm.Precio = anuncio.Precio;
+            anunciovm.Descripcion = anuncio.Descripcion;
+            anunciovm.CategoryId = anuncio.CategoryId;
+            return anunciovm;
         }
 
         public async Task Delete(int id)
@@ -47,8 +56,9 @@ namespace E_Market.Core.Application.Services
 
         public async Task<List<AnuncioViewModel>> GetAllViewModel()
         {
-            var anuncio = await _anuncioRepository.GetAllWithInclude(new List<string> { "Category"});
-            return anuncio.Where(a => a.UsuarioId == _userViewModel.Id).Select(a => new AnuncioViewModel
+            var anuncio = await _anuncioRepository.GetAllWithInclude(new List<string> { "Category", "Imagen"});
+
+            return anuncio.Where(a => a.UsuarioId == _userViewModel.Id).Select( a => new AnuncioViewModel
             {
                 Id = a.Id,
                 Nombre = a.Nombre,
@@ -56,6 +66,7 @@ namespace E_Market.Core.Application.Services
                 CategoryId = a.CategoryId,
                 Imagen = a.Imagen,
                 Precio = a.Precio,
+                CategoryName = a.Category.Nombre
 
             }).ToList();
         }
@@ -66,7 +77,6 @@ namespace E_Market.Core.Application.Services
             SaveAnuncioViewModel vm = new();
             vm.Id = anuncio.Id;
             vm.Nombre = anuncio.Nombre;
-            vm.Imagen = anuncio.Imagen;
             vm.Precio = anuncio.Precio;
             vm.Descripcion = anuncio.Descripcion;
             vm.CategoryId = anuncio.CategoryId;
@@ -76,10 +86,9 @@ namespace E_Market.Core.Application.Services
 
         public async Task Update(SaveAnuncioViewModel vm)
         {
-            Anuncio anuncio = new();
+            Anuncio anuncio = await _anuncioRepository.GetByIdAsync(vm.Id);
             anuncio.Id = vm.Id;
             anuncio.Nombre = vm.Nombre;
-            anuncio.Imagen = vm.Imagen;
             anuncio.Precio = vm.Precio;
             anuncio.Descripcion = vm.Descripcion;
             anuncio.CategoryId = vm.CategoryId;
@@ -97,6 +106,7 @@ namespace E_Market.Core.Application.Services
                 Imagen = a.Imagen,
                 Precio = a.Precio,
                 Descripcion = a.Descripcion,
+                CategoryName = a.Category.Nombre
 
             }).ToList();
             if (filters.CategoryId != null)

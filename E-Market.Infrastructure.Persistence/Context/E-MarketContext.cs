@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using E_Market.Core.Application.ViewModel.User;
+using Microsoft.AspNetCore.Http;
+using E_Market.Core.Application.Helpers;
 
 namespace E_Market.Infrastructure.Persistence.Context
 {
@@ -14,10 +17,14 @@ namespace E_Market.Infrastructure.Persistence.Context
         public DbSet<Anuncio> anuncios { get; set; }
         public DbSet<User> user { get; set; }
         public DbSet<Category> categories { get; set; }
+        public DbSet<Imagen> imagen { get; set; }
+        private readonly UserViewModel _userViewModel;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public E_MarketContext(DbContextOptions<E_MarketContext> options) : base(options)
+        public E_MarketContext(DbContextOptions<E_MarketContext> options, IHttpContextAccessor httpContext) : base(options)
         {
-
+            _httpContextAccessor = httpContext;
+            _userViewModel = _httpContextAccessor.HttpContext.Session.Get<UserViewModel>("user");
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
@@ -27,11 +34,11 @@ namespace E_Market.Infrastructure.Persistence.Context
                 {
                     case EntityState.Added:
                         entry.Entity.CreatedDate = DateTime.Now;
-                        entry.Entity.CreatedBy = "DefaultAppUser";
+                        entry.Entity.CreatedBy = _userViewModel.Nombre;
                         break;
                     case EntityState.Modified:
                         entry.Entity.ModifiedDate = DateTime.Now;
-                        entry.Entity.ModifiedBy = "DefaultAppUser";
+                        entry.Entity.ModifiedBy = _userViewModel.Nombre;
                         break;
                 }
             }
@@ -45,17 +52,25 @@ namespace E_Market.Infrastructure.Persistence.Context
             model.Entity<Anuncio>().ToTable("Anuncio");
             model.Entity<User>().ToTable("User");
             model.Entity<Category>().ToTable("Category");
+            model.Entity<Imagen>().ToTable("Imagen");
             #endregion
             #region PrimaryKey
             model.Entity<Anuncio>().HasKey(a => a.Id);
             model.Entity<User>().HasKey(u => u.Id);
             model.Entity<Category>().HasKey(c => c.Id);
+            model.Entity<Imagen>().HasKey(c => c.Id);
             #endregion
             #region Relation
             model.Entity<Category>()
                 .HasMany<Anuncio>(a => a.Anuncio)
                 .WithOne(u => u.Category)
                 .HasForeignKey(a => a.CategoryId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            model.Entity<Anuncio>()
+                .HasMany<Imagen>(a => a.Imagen)
+                .WithOne(u => u.anuncio)
+                .HasForeignKey(a => a.idAnuncio)
                 .OnDelete(DeleteBehavior.Cascade);
 
             model.Entity<User>()
@@ -80,9 +95,6 @@ namespace E_Market.Infrastructure.Persistence.Context
                 .Property(a => a.Nombre)
                 .IsRequired()
                 .HasMaxLength(100);
-            model.Entity<Anuncio>()
-                .Property(a => a.Imagen)
-                .IsRequired();
             model.Entity<Anuncio>()
                 .Property(a => a.Descripcion)
                 .IsRequired();
@@ -112,6 +124,12 @@ namespace E_Market.Infrastructure.Persistence.Context
             model.Entity<User>()
                 .Property(u => u.NombreUsuario)
                 .IsRequired();
+            #endregion
+            #region Imagen
+            model.Entity<Imagen>()
+                .Property(i => i.Nombre);
+            model.Entity<Imagen>()
+                .Property(i => i.ImageUrl);
             #endregion
 
             #endregion

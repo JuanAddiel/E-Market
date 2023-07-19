@@ -9,7 +9,7 @@ namespace E_Market.Core.Domain.Entites
 {
     public class Anuncio:AuditableBaseEntity
     {
-        public string Imagen { get; set; }
+        public List<Imagen> Imagen { get; set; }
         public string Descripcion { get; set; }
         public double Precio { get; set; }
         public int CategoryId { get; set; }

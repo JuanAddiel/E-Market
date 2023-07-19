@@ -43,9 +43,8 @@
                             <td>@item.Descripcion</td>
                             <td>@item.AnuncioQuantity</td>
                             <td>
-                                <button type="button" class="btn btn-link btn-sm px-3" data-ripple-color="dark">
-                                    <i class="fa-solid fa-pen"></i>
-                                </button>
+                                <a asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id" asp class="btn btn-sm btn-warning">Update</a>
+                                <a asp-controller="Category" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
                             </td>
                         </tr>
                     }

@@ -20,8 +20,8 @@
     <header>
 
         <nav class="navbar navbar-dark navbar-expand-lg gradient">
-            <div class="container">
-                <a class="navbar-brand logo">E-Market</a>
+            <div class="container"> 
+                <a class="navbar-brand logo" asp-controller="Home" asp-action="Index">E-Market</a>
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="visually-hidden">
                         Toggle
@@ -30,13 +30,31 @@
                 </button>
                 <div id="navbarNav" class="collapse navbar-collapse">
                     <ul class="navbar-nav ms-auto">
+                        @{
+                            var currentController = ViewContext.RouteData.Values["controller"] as string;
+                            var currentAction = ViewContext.RouteData.Values["action"] as string;
+                        }
                         @if(user != null)
                         {
-                            <li class="nav-item"><a class="nav-link active" asp-controller="Home" asp-action="Index">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" asp-controller="Anuncio" asp-action="Index">Anuncio</a></li>
-                            <li class="nav-item"><a class="nav-link" asp-controller="Category" asp-action="Index">Category</a></li>
+   
 
-                            <li class="nav-item"><a class="nav-link" asp-controller="User" asp-action="Logout">Cerrar Seccion</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link @(currentController == "Home" && currentAction == "Index" ? "active" : "")"
+                                   asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link @(currentController == "Anuncio" && currentAction == "Index" ? "active" : "")"
+                                   asp-controller="Anuncio" asp-action="Index">Anuncio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link @(currentController == "Category" && currentAction == "Index" ? "active" : "")"
+                                   asp-controller="Category" asp-action="Index">Category</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link @(currentController == "User" && currentAction == "Logout" ? "active" : "")"
+                                   asp-controller="User" asp-action="Logout">Cerrar Sección</a>
+                            </li>
+
                         }
                     </ul>
                 </div>
@@ -55,6 +73,10 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

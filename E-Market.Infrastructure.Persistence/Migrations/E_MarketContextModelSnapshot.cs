@@ -44,10 +44,6 @@ namespace E_Market.Infrastructure.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Imagen")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
@@ -108,6 +104,45 @@ namespace E_Market.Infrastructure.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Category", (string)null);
+                });
+
+            modelBuilder.Entity("E_Market.Core.Domain.Entites.Imagen", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("idAnuncio")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("idAnuncio");
+
+                    b.ToTable("Imagen", (string)null);
                 });
 
             modelBuilder.Entity("E_Market.Core.Domain.Entites.User", b =>
@@ -180,6 +215,22 @@ namespace E_Market.Infrastructure.Persistence.Migrations
                     b.Navigation("Category");
 
                     b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("E_Market.Core.Domain.Entites.Imagen", b =>
+                {
+                    b.HasOne("E_Market.Core.Domain.Entites.Anuncio", "anuncio")
+                        .WithMany("Imagen")
+                        .HasForeignKey("idAnuncio")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("anuncio");
+                });
+
+            modelBuilder.Entity("E_Market.Core.Domain.Entites.Anuncio", b =>
+                {
+                    b.Navigation("Imagen");
                 });
 
             modelBuilder.Entity("E_Market.Core.Domain.Entites.Category", b =>
