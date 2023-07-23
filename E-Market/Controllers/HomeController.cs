@@ -11,13 +11,15 @@ namespace E_Market.Controllers
     {
         private readonly IAnuncioServices _anuncioServices;
         private readonly ICategoryServices _categoryServices;
+        private readonly IImagenServices _imagenServices;
         private readonly ValidateUserSession _validateUserSession;
 
-        public HomeController(IAnuncioServices anuncioServices, ICategoryServices categoryServices, ValidateUserSession validateUserSession)
+        public HomeController(IImagenServices imagenServices,IAnuncioServices anuncioServices, ICategoryServices categoryServices, ValidateUserSession validateUserSession)
         {
             _anuncioServices = anuncioServices;
             _categoryServices = categoryServices;
             _validateUserSession = validateUserSession;
+            _imagenServices = imagenServices;
         }
 
         //Investiga si hay usuario si no hay manda a la vista index, del controlador user

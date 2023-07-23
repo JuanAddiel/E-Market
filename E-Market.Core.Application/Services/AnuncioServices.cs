@@ -97,8 +97,8 @@ namespace E_Market.Core.Application.Services
         }
         public async Task<List<AnuncioViewModel>> GetAllViewModelWithFilters(FilterAnuncioViewModel filters)
         {
-            var anuncioList = await _anuncioRepository.GetAllWithInclude(new List<string> { "Category" });
-            var list = anuncioList.Where(Anuncio => Anuncio.UsuarioId == _userViewModel.Id).Select(a => new AnuncioViewModel
+            var anuncioList = await _anuncioRepository.GetAllWithInclude(new List<string> { "Category", "Imagen" });
+            var list = anuncioList.Where(Anuncio => Anuncio.UsuarioId != _userViewModel.Id).Select(a => new AnuncioViewModel
             {
                 Nombre = a.Nombre,
                 Id = a.Id,

@@ -1,8 +1,98 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using E_Market.Core.Application.ViewModel.Anuncio;
+@using E_Market.Core.Application.ViewModel.Image;
+@using E_Market.Core.Application.ViewModel.Category;
+@model List<AnuncioViewModel>;
+@{
+    ViewData["title"] = "Anuncios";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-3">
+            <div class="card shadow-sm">
+                <div class="card-header bg-dark text-light">
+                    <h4>Filtros</h4>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Categorias</h4>
+
+                    <form method="post" asp-controller="Home" asp-action="Index">
+
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" value="null" type="radio" name="CategoryId" id="category-all" />
+                                <label class="form-check-label" for="category-all">Todas</label>
+                            </div>
+                        </div>
+
+                        @foreach (CategoryViewModel category in ViewBag.Category)
+                        {
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" value="@category.Id" type="radio" name="CategoryId" id="category-@category.Id" />
+                                    <label class="form-check-label" for="category-@category.Id">@category.Nombre</label>
+                                </div>
+                            </div>
+                        }
+
+                        <button type="submit" class="btn btn-primary">Filtrar</button>
+
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+
+
+<div class="row">
+    @if (Model == null || Model.Count == 0)
+    {
+        <h2>No hay productos</h2>
+    }
+    else
+    {
+        @foreach (var item in Model)
+        {
+            <div class="col-4 p-3 mb-3">
+                <div class="card">
+                    <div id="carousel-@item.Id" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            @foreach (var imagen in item.Imagen)
+                            {
+                                <div class="carousel-item @(imagen == item.Imagen.First() ? "active" : "")">
+                                    <img src="@imagen.ImageUrl" class="card-img-top rounded float-start img-fluid" alt="@imagen.Nombre">
+                                </div>
+                            }
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-@item.Id" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-@item.Id" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Nombre - $@item.Precio</h5>
+                        <p class="card-text">
+                            @item.Descripcion
+                        </p>
+                        <p class="card-text">
+                            <small class="text-body-secondary">Categoria: @item.CategoryName</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        }
+
+
+
+    }
+
+</div>
+</div>
 </div>

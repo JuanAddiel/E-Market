@@ -108,9 +108,23 @@ namespace E_Market.Controllers
 
             SaveAnuncioViewModel anunciovm = await _anuncioServices.GetByIdSaveViewModel(vm.Id);
 
-            List<string> uploadedImagePaths = UploadFile.UploadFiles(vm.File, anunciovm.Id, true, anunciovm.Imagen);
+            List<string> imagePaths = UploadFile.UploadFiles(vm.File, anunciovm.Id);
+            foreach (var imgPath in imagePaths)
+            {
+                var imagen = new Imagen
+                {
+                    Nombre = Path.GetFileName(imgPath),
+                    ImageUrl = imgPath,
+                    idAnuncio = anunciovm.Id
+                };
+                SaveImagenViewModel sv = new();
+                sv.Id = imagen.Id;
+                sv.ImageUrl = imagen.ImageUrl;
+                sv.Nombre = imagen.Nombre;
+                sv.IdAnuncio = imagen.idAnuncio;
 
-            anunciovm.Imagen = uploadedImagePaths;
+                await _imagenServices.Add(sv);
+            }
 
             await _anuncioServices.Update(anunciovm);
 
